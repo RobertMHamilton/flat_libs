@@ -1,4 +1,6 @@
 import os
+from termcolor import colored
+from colorama import init
 
 def mad_lib():
     os.system('clear')
@@ -17,5 +19,5 @@ def mad_lib():
 
     story = 'Last night I dreamed I was a ' + adjective + ' butterfly with ' + color + ' splotches that looked like '+ thing + ' .I flew to ' + place + ' with my best friend and '+ person + ' who was a '+ adjective1 + ' ' + insect +' .We ate some ' + food + ' when we got there and then decided to '+ verb + ' and the dream ended when I said-- lets ' + verb + '.'
 
-    print(story)
+    print(colored(story ,"red"))
     return story

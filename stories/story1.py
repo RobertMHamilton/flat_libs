@@ -1,4 +1,6 @@
 import os
+from termcolor import colored
+from colorama import init
 
 def mad_lib():
     
@@ -28,8 +30,8 @@ def mad_lib():
 
     # text = 'say ' + food + ', the photographer said as the camera flashed! ' + name + ' and I had gone to ' + place +' to get our photos taken on my birthday. The first photo we really wanted was a picture of us dressed as ' + animals + ' pretending to be a ' + profession + '. when we saw the second photo, it was exactly what I wanted. We both looked like ' + things + ' wearing ' + cloth + ' and ' + verb + ' --exactly what I had in mind'
 
-    text = '       say, ' + animals + 'the photographer said as the camera flashed! \n       and I had gone to to get our photos taken on my birthday. \n       The first photo we really wanted was a picture of us dressed as pretending to be a. \n       when we saw the second photo, it was exactly what I wanted. \n       We both looked like wearing and --exactly what I had in mind'
+    text = '       say, ' + animals + ' the photographer said as the camera flashed! \n       and I had gone to to get our photos taken on my birthday. \n       The first photo we really wanted was a picture of us dressed as pretending to be a. \n       when we saw the second photo, it was exactly what I wanted. \n       We both looked like wearing and --exactly what I had in mind'
     
-    print("\033[1;38;5;63m" + text + "\033[0m")
+    print(colored(text , 'black'))
     
     return text

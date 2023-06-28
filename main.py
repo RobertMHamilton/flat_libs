@@ -1,7 +1,9 @@
 import importlib; import sys; import os; import time
 from classes.story import Story, Base, engine, session
+from colorama import init
+from termcolor import colored
 
-print('Enter "Q" anytime to exit')
+print(colored('Enter "Q" anytime to exit', 'green'))
 story_num = input("\033[1;38;5;63m" + 'Select a Story:' + "\033[0m")
 
 if story_num == 'q' or len(story_num) > 20:

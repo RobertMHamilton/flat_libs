@@ -1,6 +1,8 @@
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.orm import sessionmaker
+from colorama import init, Fore, Back, Style
+import random
 
 Base = declarative_base()
 engine = create_engine('sqlite:///stories.db')
@@ -16,9 +18,16 @@ class Story(Base):
     
     @classmethod
     def get_all_stories(cls):
+        W  = '\033[0m'  # white (normal)
+        R  = '\033[31m' # red
+        G  = '\033[32m' # green
+        O  = '\033[33m' # orange
+        B  = '\033[34m' # blue
+        P  = '\033[35m' # purple
+        my_color = [W, R, G, O, B, P]
         stories = session.query(cls).all()
-        stories_str = "\n\n".join(str(story) for story in stories)
-        print("\033[1;38;5;63m" + stories_str + "\033[0m")
+        for story in stories:
+            print(story , random.choice(my_color))
     
     __tablename__ = 'stories'
 
